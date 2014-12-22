@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Based on Casey Bisson's PHP based deploy script found here:
+# https://github.com/misterbisson/bgeo/blob/master/deploy/push-to-wporg-repo.php
+
 # this script take one argument which is the plugin slug in the WordPress repositiory
 PLUGIN_SLUG=$1;
 SVN_REPO_PATH="/tmp/${PLUGIN_SLUG}"; #path to a temp SVN repo
