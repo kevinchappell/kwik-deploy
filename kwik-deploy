@@ -17,7 +17,7 @@ fi
 
 SVN_REPO_PATH="/tmp/${SLUG}" #path to a temp SVN repo
 SVN_REPO_URL="http://plugins.svn.wordpress.org/${SLUG}/trunk/"
-SVN_IGNORE_FILES=".svnignore"
+SVN_IGNORE_FILES=$(dirname $0)'/.svnignore'
 MESSAGE=$(git log -1 HEAD --pretty=format:%s)
 CURRENT_DIR=${PWD%/*}
 
@@ -45,7 +45,7 @@ echo 'Removing any svn:executable properties for security'
 find ${SVN_REPO_PATH} -type f -not -iwholename *svn* -exec svn propdel svn:executable {} \; | grep 'deleted from'
 
 echo 'Setting svn:ignore properties'
-svn propset svn:ignore -F $SVN_IGNORE_FILES $SVN_REPO_PATH
+svn propset svn:ignore -F "$SVN_IGNORE_FILES" $SVN_REPO_PATH
 
 svn proplist -v ${SVN_REPO_PATH}
 
