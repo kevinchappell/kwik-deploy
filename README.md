@@ -23,6 +23,8 @@ From the root of your plugin directory run the deploy script passing your plugin
 kwik-deploy my-plugin-name
 ```
 
+![kwik-deploy](https://cloud.githubusercontent.com/assets/1457540/12305142/2b5c9f84-ba2b-11e5-92ee-10b5d7c77985.gif)
+
 ### Note
 If your plugin directory name is the same as your plugin's slug you don't need to pass the slug as an argument, the deploy script will use the directory name as the slug. Additionally if the directory name is My Plugin Name, MyPluginName, or My-Plugin-Name and any combination the deploy script should convert it to `my-plugin-name`. This should allow you to deploy your plugin to the WordPress repo simply by typing:
 ```
