@@ -59,7 +59,7 @@ echo 'Now forcibly removing the files that are supposed to be ignored in the svn
 
 while read file; do
   svn rm --force ${SVN_REPO_PATH}/$file
-done <"${SVN_REPO_PATH}/deploy/${SVN_IGNORE_FILES}"
+done <"${SVN_IGNORE_FILES}"
 
 
 echo "
