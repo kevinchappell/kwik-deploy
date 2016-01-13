@@ -21,9 +21,6 @@ SVN_IGNORE_FILES=".svnignore"
 MESSAGE=$(git log -1 HEAD --pretty=format:%s)
 CURRENT_DIR=${PWD%/*}
 
-
-exit
-
 echo "Preparing to push ${SLUG} to ${SVN_REPO_URL}"
 
 echo 'Cleaning the destination path'
